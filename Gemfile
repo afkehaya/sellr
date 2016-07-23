@@ -7,7 +7,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
 gem 'devise'
+gem 'omniauth-facebook'
 gem 'pundit'
+
 gem 'factory_girl_rails'
 
 # Use postgresql as the database for Active Record
