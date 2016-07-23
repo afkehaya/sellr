@@ -1,25 +1,42 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Listings</h1>
+  <div class="jumbotron text-center">
+    <h1>Generate Recuring Revenue</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <%= link_to "Become A Merchant", new_user_registration_path, class: "btn btn-lg btn-warning" %>
+    <%= link_to "Become A Seller", new_user_registration_path, class: "btn-lg btn btn-success" %>
 
-  <tbody>
-    <% @listings.each do |listing| %>
-      <tr>
-        <td><%= link_to 'Show', listings %></td>
-        <td><%= link_to 'Edit', edit_listings_path(listing) %></td>
-        <td><%= link_to 'Destroy', listings, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
+<div class="listings container">
 
-<%= link_to 'New Listing', new_listings_path %>
+  <div id="listings-container" class="transitions-enabled infinite-scroll clearfix masonry centered">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Listing Listings</h1>
+
+
+        <% @listings.each do |listing| %>
+
+          <div class="box panel panel-default">
+            <%= image_tag("defaultimage.png", :alt => "default") %>
+              <div class="panel-body">
+              <div class="actions">
+                <p><strong>Company:</strong>MailChimp</p>
+                <p> 30% / Month</p>
+                <p> 20$ / Month</p>
+
+                <%= link_to 'Sell', listing, class:"glyphicon glyphicon-usd" %>
+                <%= link_to 'Edit', edit_listing_path(listing), class:"glyphicon glyphicon-edit" %>
+                <%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:"glyphicon glyphicon-trash" %>
+
+              </div>
+             </div>
+            </div>
+        <% end %>
+    </div>
+
+    <br>
+
+    <%= link_to 'New Listing', new_listing_path, class: "btn btn-lg btn-warning" %>
+  </div>
+</div>

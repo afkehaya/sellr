@@ -12,4 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require_tree .
+
+$(function(){
+
+  $('#listings-container').masonry({
+    itemSelector: '.box',
+    columnWidth: 100,
+    gutterWidth: 40
+  });
+
+});

@@ -1,0 +1,56 @@
+@import "bootstrap-sprockets";
+
+
+$body-bg:                     white;
+$font-family-sans-serif: 			'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:								45px;
+$navbar-default-bg: 				  #274259;
+$navbar-default-brand-color: 	#14BFB3;
+$brand-primary: 							#14BFB3;
+$jumbotron-bg: 							  #14BFB3;
+
+@import "bootstrap";
+body {
+  font-family : 'Calibri';
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+.navbar a {
+  color: #14BFB3;
+}
+.jumbotron {
+  color: white;
+}
+
+/* LISTING ON INDEX */
+.listings {
+  margin: 0 auto;
+}
+
+#listings-container {
+	margin: 0 auto;
+}
+
+.box {
+	margin: 10px;
+	width: 214px;
+}
+
+.box img {
+	width: 100%;
+}
+
+/* FOOTER */
+
+.footer-bg {
+  background-color: #274259;
+  margin-top: 1em;
+  color: white;
+}
+
+.footer-bg a {
+  color:white;
+  list-style: none;
+}

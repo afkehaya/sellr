@@ -131,6 +131,8 @@ GEM
     lumberjack (1.0.10)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    masonry-rails (0.2.4)
+      railties
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -306,6 +308,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   letter_opener
+  masonry-rails
   omniauth-facebook
   paper_trail
   pg (~> 0.15)
@@ -324,4 +327,4 @@ DEPENDENCIES
   will_paginate-bootstrap
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

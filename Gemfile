@@ -15,6 +15,9 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'pundit'
 
+# Used for jquery library for animations on listings index view.
+gem 'masonry-rails'
+
 gem 'factory_girl_rails'
 
 # Use postgresql as the database for Active Record

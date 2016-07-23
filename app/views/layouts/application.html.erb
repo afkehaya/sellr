@@ -6,9 +6,10 @@
   <%= javascript_include_tag 'application' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+  <body>
+    <%= render 'layouts/nav' %>
+      <%= yield %>
+    <%= render 'layouts/footer' %>
 
-<%= yield %>
-
-</body>
+  </body>
 </html>
