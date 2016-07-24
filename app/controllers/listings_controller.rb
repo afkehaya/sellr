@@ -28,6 +28,8 @@ class ListingsController < ApplicationController
 
     respond_to do |format|
       if @listing.save
+        @relationship = ListingsUser.new(user_id: current_user.id, listing_id: @listing.id, role: 'Merchant')
+        @relationship.save
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.json { render :show, status: :created, location: @listing }
       else
@@ -69,6 +71,6 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.fetch(:listing, {})
+      params[:listing].permit(:commission, :value, :product_url, :name, :description)
     end
 end
