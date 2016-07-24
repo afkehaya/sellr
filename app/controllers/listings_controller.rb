@@ -28,6 +28,8 @@ class ListingsController < ApplicationController
 
     respond_to do |format|
       if @listing.save
+        @relationship = ListingsUser.new(user_id: current_user.id, listing_id: @listing.id, role: 'Merchant')
+        @relationship.save
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.json { render :show, status: :created, location: @listing }
       else
