@@ -1,42 +1,56 @@
-<%= form_for(@listing) do |f| %>
-  <% if @listing.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+<div class="row">
+  <div class="col-lg-4 col-lg-push-4">
+    <div class="card">
+      <img class="card-img-top" data-src="http://imgs.xkcd.com/comics/walking_into_things.png">
 
-      <ul>
-      <% @listing.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+      <div class="card-block">
+
+      <%= form_for(@listing) do |f| %>
+        <% if @listing.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+              <ul>
+                <% @listing.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+        <div class="input-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control', placeholder: 'Enter your name...'%>
+        </div>
+
+        <%= f.label :commission %> <br>
+        <div class="input-group">
+          <%= f.number_field :description, class: 'text_field form-control', step: 'any', placeholder: '30.0' %>
+          <span class="input-group-addon">%</span>
+        </div>
+
+        <%= f.label :product_value %>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <%= f.number_field :value, class: 'form-control', placeholder: '5000'%>
+        </div>
+
+        <%= f.label :link_to_affiliate_marketing_campaign %>
+        <div class="input-group">
+          <span class="input-group-addon">https://</span>
+          <%= f.text_field :product_url, class: 'form-control', placeholder: 'www.example.com/affiliate_campaign_manager' %>
+        </div>
+
+        <%= f.label :description %> <br>
+        <div class="input-group">
+          <%= f.text_area :description, class:"form-control"%>
+        </div>
+
+        <div class="actions">
+          <%= f.submit 'Submit', class:'btn btn-lg btn-warning ' %>
+        </div>
+    <% end %>
+      </div>
     </div>
-  <% end %>
-
-    <div class="field">
-      <%= f.label :name %> <br>
-      <%= f.text_field :name %>
-    </div>
-
-    <div class="field">
-      <%= f.label :commission %> <br>
-      <%= f.number_field :description, class: 'text_field', step: 'any' %>
-    </div>
-
-    <div class="field">
-      <%= f.label :product_value %> <br>
-      <%= f.number_field :value %>
-    </div>
-
-    <div class="field">
-      <%= f.label :link_to_affiliate_marketing_campaign %> <br>
-      <%= f.text_field :product_url %>
-    </div>
-
-    <div class="field">
-      <%= f.label :description %> <br>
-      <%= f.text_area :description %>
-    </div>
-
-  <div class="actions">
-    <%= f.submit %>
   </div>
-<% end %>
+</div>
