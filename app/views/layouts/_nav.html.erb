@@ -21,9 +21,9 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-        <li>
+        <li class="nav-new-listing">
         <%= link_to new_listing_path do %>
-            <span class="glyphicon glyphicon-plus"></span> New Listing
+            <span class="glyphicon glyphicon-plus new-listing-plus"></span> New Listing
           <% end %>
         </li>
           <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
