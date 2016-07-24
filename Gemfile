@@ -21,6 +21,8 @@ gem 'factory_girl_rails'
 gem 'pg', '~> 0.15'
 gem 'paper_trail'
 
+gem 'paperclip', '~> 5.0.0'
+
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
