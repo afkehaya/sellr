@@ -1,13 +1,13 @@
 @import "bootstrap-sprockets";
 
 
-$body-bg:                     white;
+$body-bg:                     #c2dde6;
 $font-family-sans-serif: 			'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:								45px;
-$navbar-default-bg: 				  #274259;
+$navbar-default-bg: 				  #e05915;
 $navbar-default-brand-color: 	#14BFB3;
 $brand-primary: 							#14BFB3;
-$jumbotron-bg: 							  #14BFB3;
+$jumbotron-bg: 							  #e6e9f0;
 
 @import "bootstrap";
 body {
@@ -45,7 +45,7 @@ body {
 /* FOOTER */
 
 .footer-bg {
-  background-color: #274259;
+  background-color: #e05915;
   margin-top: 1em;
   color: white;
 }
