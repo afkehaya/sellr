@@ -1,26 +1,36 @@
 <h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+<div class="row form-card">
+  <div class="col-lg-4 col-lg-push-4">
+    <div class="card">
+      <img class="card-img-top" data-src="http://imgs.xkcd.com/comics/walking_into_things.png">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <div class="card-block">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= f.label :email %>
+          <div class="input-group">
+            <%= f.email_field :email, autofocus: true, class:"form-control", placeholder: "Enter Your Email"  %>
+          </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+            <%= f.label :password %>
+          <div class="input-group">
+            <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder: "Enter Your Password" %>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+          <div class="input-group">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end -%>
+
+          <div class="actions">
+            <%= f.submit "Log in", class: "btn btn-sm btn-warning" %>
+          </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

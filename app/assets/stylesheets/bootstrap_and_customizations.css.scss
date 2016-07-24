@@ -10,11 +10,22 @@ $brand-primary: 							#14BFB3;
 $jumbotron-bg: 							  #c2dde6;
 
 @import "bootstrap";
-body {
-  font-family : 'Calibri';
+
+* {
+    margin: 0;
 }
+html, body {
+    height: 100%;
+    font-family : 'Calibri';
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -55px; /* the bottom margin is the negative value of the footer's height */
+}
+
 .navbar {
-  position: fixed;
   width: 100%;
   border-radius: 0px;
 }
@@ -40,6 +51,7 @@ body {
 /* LISTING ON INDEX */
 .listings {
   margin: 0 auto;
+  margin-bottom: 2em;
 }
 
 #listings-container {
@@ -56,6 +68,10 @@ body {
 }
 
 /* FOOTER */
+.footer, .push {
+    height: 55px; /* .push must be the same height as .footer */
+}
+
 .footer {
   position: relative;
   bottom: 0px;
@@ -63,12 +79,27 @@ body {
 }
 footer {
   background-color:  #431c5d;
-  margin-top: 1em;
-  padding: 10px;
-  color: white;
+  padding: 15px;
 }
 
 footer a {
   color:white;
   list-style: none;
+}
+
+/* FORMS */
+.form-card {
+  margin-top: 2em;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+}
+/* USER EDIT ACCOUNT PAGE */
+
+.form-button {
+  margin-top: 2em;
 }

@@ -1,40 +1,49 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2 class="text-center">Account Setup</h2>
+ <div class="form-card">
+  <div class="row">
+    <div class="col-lg-4 col-lg-push-4">
+      <div class="card">
+        <img class="card-img-top" data-src="http://imgs.xkcd.com/comics/walking_into_things.png">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+          <div class="card-block">
 
-    <div class="field">
-      <%= f.label :first_name %> <br>
-      <%= f.text_field :first_name %>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+              <%= devise_error_messages! %>
+
+                <%= f.label :first_name %>
+                <div class="input-group">
+                  <%= f.text_field :first_name, class: 'form-control', placeholder: 'First Name' %>
+                </div>
+
+                <%= f.label :last_name %>
+                <div class="input-group">
+                  <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last Name' %>
+                </div>
+                <%= f.label :website %>
+                <div class="input-group">
+                  <%= f.text_field :website, class: 'form-control', placeholder: 'URL' %>
+                </div>
+
+                <%= f.label :phone_number %>
+                <div class="input-group">
+                  <%= f.phone_field :phone_number, class: 'form-control', placeholder: 'Phone Number' %>
+                </div>
+
+                <%= f.label :bio %>
+                <div class="input-group">
+                  <%= f.text_area :bio %>
+                </div>
+
+                <div class="actions">
+                <%= f.submit "Update", class: "btn btn-md btn-warning" %>
+              </div>
+            <% end %>
+            <%= link_to "Back", :back, class: "btn btn-sm btn-success form-button" %>
+          <div class="cancle">
+            <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete%>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="field">
-      <%= f.label :last_name %> <br>
-      <%= f.text_field :last_name %>
-    </div>
-
-    <div class="field">
-      <%= f.label :website %> <br>
-      <%= f.text_field :website %>
-    </div>
-
-    <div class="field">
-      <%= f.label :phone_number %> <br>
-      <%= f.phone_field :phone_number %>
-    </div>
-
-    <div class="field">
-      <%= f.label :bio %> <br>
-      <%= f.text_area :bio %>
-    </div>
-
-    <div class="actions">
-    <%= f.submit "Update" %>
   </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
