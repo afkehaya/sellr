@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :listings_users
   has_many :listings, through: :listings_users
+
 end

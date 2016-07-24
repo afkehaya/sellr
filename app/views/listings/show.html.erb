@@ -1,4 +1,6 @@
 <p id="notice"><%= notice %></p>
+<% if user_signed_in? && current_user? %>
+  <%= link_to 'Edit', edit_listing_path(@listing) %> |
+<% end %>
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>
