@@ -1,13 +1,13 @@
 @import "bootstrap-sprockets";
 
 
-$body-bg:                     #c2dde6;
+$body-bg:                     #e6e9f0;
 $font-family-sans-serif: 			'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:								45px;
-$navbar-default-bg: 				  #e05915;
-$navbar-default-brand-color: 	#14BFB3;
+$navbar-default-bg: 				  #431c5d;
+$navbar-default-brand-color: 	white;
 $brand-primary: 							#14BFB3;
-$jumbotron-bg: 							  #e6e9f0;
+$jumbotron-bg: 							  #c2dde6;
 
 @import "bootstrap";
 body {
@@ -17,11 +17,14 @@ body {
 .navbar {
     margin-bottom: 0;
 }
-.navbar a {
-  color: #14BFB3;
+.navbar-default .navbar-nav a:hover {
+  color:white;
+}
+.navbar-default .navbar-nav a:focus  {
+  color:white;
 }
 .jumbotron {
-  color: white;
+  color: #431c5d;
 }
 
 /* LISTING ON INDEX */
@@ -45,7 +48,7 @@ body {
 /* FOOTER */
 
 .footer-bg {
-  background-color: #e05915;
+  background-color:  #431c5d;
   margin-top: 1em;
   color: white;
 }
