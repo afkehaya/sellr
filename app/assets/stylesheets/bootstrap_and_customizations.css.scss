@@ -14,6 +14,8 @@ body {
   font-family : 'Calibri';
 }
 .navbar {
+  position: fixed;
+  width: 100%;
   border-radius: 0px;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
@@ -54,7 +56,11 @@ body {
 }
 
 /* FOOTER */
-
+.footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
 footer {
   background-color:  #431c5d;
   margin-top: 1em;
