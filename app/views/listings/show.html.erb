@@ -3,4 +3,6 @@
   <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <% end %>
 
+<%= image_tag @listing.image.url(:small) %>
+
 <%= link_to 'Back', listings_path %>

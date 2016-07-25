@@ -71,6 +71,6 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params[:listing].permit(:commission, :value, :product_url, :name, :description)
+      params[:listing].permit(:commission, :value, :product_url, :name, :description, :image)
     end
 end
