@@ -1,5 +1,5 @@
 <div class="row form-card">
-  <div class="col-lg-4 col-lg-push-4">
+  <div class="col-lg-4 col-lg-push-4 form-border">
     <div class="card">
       <img class="card-img-top" data-src="http://imgs.xkcd.com/comics/walking_into_things.png">
 
@@ -42,13 +42,14 @@
             </div>
 
             <%= f.label :description %> <br>
-            <div class="input-group">
+            <div class="input-group description-text-box">
               <%= f.text_area :description, class:"form-control"%>
             </div>
 
             <div>
               <%= f.label :image, "Image" %>
-              <%= f.file_field :image %>
+              <%= f.file_field :image, id: "pictureInput"%>
+              <div id="uploaded-image"></div>            
             </div>
 
             <div class="actions">
@@ -59,3 +60,19 @@
     </div>
   </div>
 </div>
+
+<script>
+window.onload = function() {
+  document.getElementById('pictureInput').addEventListener('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.src = file.target.result;
+      document.getElementById('uploaded-image').innerHTML = "<img src='" + img.src + "'>"
+    }
+    reader.readAsDataURL(image);
+  });
+};
+</script>
