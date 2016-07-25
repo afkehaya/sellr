@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @listing.image.url(:small) %>
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>
