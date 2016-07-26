@@ -26,8 +26,7 @@
 <% end %>
 
 <div class="listings container">
-
-  <div id="listings-container" class="transitions-enabled infinite-scroll clearfix masonry centered">
+  <div id="listings-container" class="transitions-enabled">
     <p id="notice"><%= notice %></p>
 
     <h1>Merchants</h1>
@@ -35,8 +34,9 @@
 
         <% @listings.each do |listing| %>
 
-          <div class="box panel panel-default">
-            <%= image_tag listing.image.url(:large) %>
+        <div class="box panel panel-default">
+          <%= image_tag listing.image.url(:large) %>
+
               <div class="panel-body">
               <div class="actions">
                 <p><%= listing.name %></p>
@@ -50,11 +50,10 @@
               </div>
              </div>
             </div>
-        <% end %>
-    </div>
+         <% end %>
 
     <br>
 
-    <%= link_to 'New Listing', new_listing_path, class: "btn btn-lg btn-warning" %>
-  </div>
-</div>
+        <%= link_to 'New Listing', new_listing_path, class: "btn btn-lg btn-warning" if user_signed_in? && current_user.merchant? %>
+      </div>
+    </div>
