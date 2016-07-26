@@ -67,6 +67,20 @@ html, body {
   margin-top: 2em;
 }
 
+.box-sizer {
+  width: 15%;
+}
+
+.listing-box-image {
+  height: 100px;
+}
+
+.listing-image {
+  width: 100%;
+  height: auto;
+  padding: 10%;
+}
+
 /* LISTING ON INDEX */
 .listings {
   margin: 0 auto;
@@ -108,7 +122,7 @@ footer a {
 }
 /* Listings */
 .uploaded-image img{
-  width:70%;
+  width:15%;
 }
 
 .listing-image img {
@@ -169,9 +183,13 @@ textarea {
 /* About Page */
 
 .about a {
-  color: white;
+  color: darkmagenta;
   list-style: none;
 }
 .about-text h5 {
   line-height: 20px;
+}
+
+.about-text h4 {
+  font-weight: bolder;
 }
