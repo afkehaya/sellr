@@ -30,6 +30,10 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'capistrano', '~> 3.4.1'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.4'

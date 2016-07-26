@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: sellr_development
+  username: sellr
+  password: sellr_pass
+
+test:
+  <<: *default
+  database: sellr_test
+
+production:
+  <<: *default
+  database: sellr_production
+  username: sellr
+  password: sellr_pass
