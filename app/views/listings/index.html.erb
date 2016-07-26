@@ -35,8 +35,10 @@
 
         <% @listings.each do |listing| %>
 
-          <div class="box panel panel-default">
-            <%= image_tag listing.image.url(:large) %>
+          <div class="box panel panel-default box-sizer">
+            <div class="listing-box-image">
+              <%= image_tag listing.image.url(:large), class: "listing-image" %>
+            </div>
               <div class="panel-body">
               <div class="actions">
                 <p><%= listing.name %></p>
