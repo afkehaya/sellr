@@ -88,7 +88,7 @@ html, body {
 
 /* FOOTER */
 .footer, .push {
-    height: 55px; /* .push must be the same height as .footer */
+    height: 100px; /* .push must be the same height as .footer */
 }
 
 .footer {
@@ -164,4 +164,13 @@ textarea {
 .btn-merchantapp {
   margin-top: 6px;
   margin-right: 10px;
+}
+/* About Page */
+
+.about a {
+  color: white;
+  list-style: none;
+}
+.about-text h5 {
+  line-height: 20px;
 }
