@@ -7,7 +7,9 @@
             <div class="col-md-6 listing-image">
               <h2><%= @listing.name %></h2>
               <%= image_tag @listing.image.url(:large) %>
-              <%= button_to "Sell This Product", "@listing.product_url", class: "btn btn-lg btn-warning"%>
+              <div>
+                <a href="<%= @listing.product_url %>" class="btn btn-lg btn-warning">Sell This Product</a>
+              </div>
             </div>
             <div class="col-md-6">
               <h3> <strong>Commission:</strong> <%= @listing.commission %>%</h3>

@@ -1,5 +1,5 @@
 User.create!([
-  {email: "kevin.malta@gmail.com", encrypted_password: "$2a$11$hH0w2oZR.YgHN5TYGwvUyOOhnoYpKjRAzXyYQVGOBe0xvHmL7h84q", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-07-26 05:27:48", last_sign_in_at: "2016-07-26 05:27:48", current_sign_in_ip: "::1", last_sign_in_ip: "::1", first_name: nil, last_name: nil, website: nil, phone_number: nil, bio: nil}
+  {email: "alexkehaya@opuslogica.com", password: "tiapwAK4", encrypted_password: "$2a$11$hH0w2oZR.YgHN5TYGwvUyOOhnoYpKjRAzXyYQVGOBe0xvHmL7h84q", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-07-26 05:27:48", last_sign_in_at: "2016-07-26 05:27:48", current_sign_in_ip: "::1", last_sign_in_ip: "::1", first_name: nil, last_name: nil, website: nil, phone_number: nil, bio: nil}
 ])
 Listing.create!([
   {commission: nil, value: 15.0, is_active: nil, requires_application: nil, description: "World's easist email marketing", is_sponsored: nil, product_url: "https://www.getresponse.com/partners", name: "GetResponse", image_file_name: "Get-Response-Logo-Light.jpeg", image_content_type: "image/jpeg", image_file_size: 24650, image_updated_at: "2016-07-26 05:28:15"},
