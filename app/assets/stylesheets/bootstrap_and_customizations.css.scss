@@ -182,9 +182,13 @@ textarea {
 /* About Page */
 
 .about a {
-  color: white;
+  color: darkmagenta;
   list-style: none;
 }
 .about-text h5 {
   line-height: 20px;
+}
+
+.about-text h4 {
+  font-weight: bolder;
 }
