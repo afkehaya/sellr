@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <% if user_signed_in? %>
-  <%= link_to 'Edit', edit_listing_path(@listing) %> |
+  <%= link_to 'Edit', edit_listing_path(@listing) if current_user.merchant? %> |
 <% end %>
 
 <%= image_tag @listing.image.url(:small) %>

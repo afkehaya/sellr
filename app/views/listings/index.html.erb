@@ -44,8 +44,8 @@
                 <p> 20$ / Month</p>
 
                 <%= link_to 'Sell', listing, class:"glyphicon glyphicon-usd" %>
-                <%= link_to 'Edit', edit_listing_path(listing), class:"glyphicon glyphicon-edit" %>
-                <%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:"glyphicon glyphicon-trash" %>
+                <%= link_to 'Edit', edit_listing_path(listing), class:"glyphicon glyphicon-edit" if current_user.merchant? %>
+                <%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:"glyphicon glyphicon-trash" if current_user.merchant?  %>
 
               </div>
              </div>
