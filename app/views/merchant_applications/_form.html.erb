@@ -1,0 +1,41 @@
+<%= form_for(@merchant_application) do |f| %>
+  <% if @merchant_application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@merchant_application.errors.count, "error") %> prohibited this merchant_application from being saved:</h2>
+
+      <ul>
+      <% @merchant_application.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :first_name %>
+  <div class="form-group">
+    <%= f.text_field :first_name, class: "form-control" %>
+  </div>
+
+  <%= f.label :last_name %>
+  <div class="form-group">
+    <%= f.text_field :last_name, class: "form-control" %>
+  </div>
+
+  <%= f.label :company %>
+  <div class="form-group">
+    <%= f.text_field :company, class: "form-control" %>
+  </div>
+
+  <%= f.label :phone_number %>
+  <div class="form-group">
+    <%= f.text_field :phone_number, class: "form-control" %>
+  </div>
+
+  <%= f.label :website %>
+  <div class="form-group">
+    <%= f.text_field :website, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Become A Merchant", class: "btn btn-md btn-warning" %>
+  </div>
+<% end %>

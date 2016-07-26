@@ -3,7 +3,7 @@
     <div class="container">
       <h1 class="headline">Generate Recurring Revenue</h1>
 
-      <%= link_to "Become A Merchant", new_user_registration_path, class: "btn btn-lg btn-warning" %>
+      <%= link_to "Become A Merchant", new_merchant_application_path, class: "btn btn-lg btn-warning" %>
       <%= link_to "Become A Seller", new_user_registration_path, class: "btn-lg btn btn-warning" %>
         <div class="row benefits">
           <div class="col-md-6">
@@ -44,8 +44,8 @@
                 <p> 20$ / Month</p>
 
                 <%= link_to 'Sell', listing, class:"glyphicon glyphicon-usd" %>
-                <%= link_to 'Edit', edit_listing_path(listing), class:"glyphicon glyphicon-edit" if current_user.merchant? %>
-                <%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:"glyphicon glyphicon-trash" if current_user.merchant?  %>
+                <%= link_to 'Edit', edit_listing_path(listing), class:"glyphicon glyphicon-edit" if user_signed_in? && current_user.merchant? %>
+                <%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:"glyphicon glyphicon-trash" if user_signed_in? && current_user.merchant?  %>
 
               </div>
              </div>

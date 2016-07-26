@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @merchant_application.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @merchant_application.last_name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @merchant_application.company %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @merchant_application.phone_number %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @merchant_application.website %>
+</p>
+
+<%= link_to 'Edit', edit_merchant_application_path(@merchant_application) %> |
+<%= link_to 'Back', merchant_applications_path %>
