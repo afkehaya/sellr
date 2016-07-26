@@ -1,3 +1,5 @@
+
+
 User.create!([
   {email: "alexkehaya@opuslogica.com", password: "tiapwAK4", encrypted_password: "$2a$11$hH0w2oZR.YgHN5TYGwvUyOOhnoYpKjRAzXyYQVGOBe0xvHmL7h84q", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-07-26 05:27:48", last_sign_in_at: "2016-07-26 05:27:48", current_sign_in_ip: "::1", last_sign_in_ip: "::1", first_name: nil, last_name: nil, website: nil, phone_number: nil, bio: nil}
 ])
@@ -20,6 +22,17 @@ Listing.create!([
   {commission: 15, value: 10.0, is_active: nil, requires_application: nil, description: "Multiple social media account management tool.", is_sponsored: nil, product_url: "https://hootsuite.com/about/partner-programs/affiliate-program", name: "HootSuite", image_file_name: "hootsuite.jpeg", image_content_type: "image/jpeg", image_file_size: 97107, image_updated_at: "2016-07-26 05:53:43"},
   {commission: 40, value: 18.0, is_active: nil, requires_application: nil, description: "SocialOomph.com is a service that provides free and paid productivity enhancement services for social media users.", is_sponsored: nil, product_url: "https://www.socialoomph.com/affiliates", name: "SocialOomph", image_file_name: "socialoomph.jpeg", image_content_type: "image/jpeg", image_file_size: 38723, image_updated_at: "2016-07-26 05:55:00"}
 ])
+
+for listing in Listing.all do
+  id = listing.id
+  image_file_name = listing.image_file_name
+  image_path = "#{Rails.root}/app/assets/images/#{id}/large/#{image_file_name}"
+  listing.image = File.new(image_path)
+  listing.save!
+end
+
+
+
 ListingsUser.create!([
   {user_id: 1, listing_id: 1, role: "Merchant"},
   {user_id: 1, listing_id: 2, role: "Merchant"},
