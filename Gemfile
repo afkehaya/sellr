@@ -26,6 +26,9 @@ gem 'paper_trail'
 
 gem 'paperclip', '~> 5.0.0'
 
+# Pundit gem for role based authorizatoins 
+gem "pundit"
+
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
