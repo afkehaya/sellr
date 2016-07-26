@@ -20,6 +20,10 @@ gem 'masonry-rails'
 
 gem 'factory_girl_rails'
 
+#active admin for admin dashbord
+gem 'activeadmin', github: 'activeadmin'
+
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 gem 'paper_trail'

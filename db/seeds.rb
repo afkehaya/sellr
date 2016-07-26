@@ -39,3 +39,4 @@ ListingsUser.create!([
   {user_id: 1, listing_id: 16, role: "Merchant"},
   {user_id: 1, listing_id: 17, role: "Merchant"}
 ])
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
