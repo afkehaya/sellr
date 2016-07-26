@@ -36,12 +36,12 @@
         <% @listings.each do |listing| %>
 
           <div class="box panel panel-default">
-            <%= image_tag("defaultimage.png", :alt => "default") %>
+            <%= image_tag listing.image.url(:large) %>
               <div class="panel-body">
               <div class="actions">
-                <p><strong>Company:</strong>MailChimp</p>
-                <p> 30% / Month</p>
-                <p> 20$ / Month</p>
+                <p><%= listing.name %></p>
+                <p> <%= listing.commission %>/ Month</p>
+                <p> $<%= listing.value %> / Month</p>
 
                 <%= link_to 'Sell', listing, class:"glyphicon glyphicon-usd" %>
                 <%= link_to 'Edit', edit_listing_path(listing), class:"glyphicon glyphicon-edit" if user_signed_in? && current_user.merchant? %>

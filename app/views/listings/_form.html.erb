@@ -1,63 +1,56 @@
 <%= javascript_include_tag "display_image.js" %>
-<div class="row form-card">
-  <div class="col-lg-4 col-lg-push-4 form-border">
-    <div class="card">
-      <img class="card-img-top" data-src="http://imgs.xkcd.com/comics/walking_into_things.png">
+  <img data-src="http://imgs.xkcd.com/comics/walking_into_things.png">
 
-      <div class="card-block">
+  <%= form_for @listing, html: { multipart: true } do |f| %>
+    <% if @listing.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
 
-          <%= form_for @listing, html: { multipart: true } do |f| %>
-            <% if @listing.errors.any? %>
-                <div id="error_explanation">
-                  <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
-
-                  <ul>
-                    <% @listing.errors.full_messages.each do |message| %>
-                        <li><%= message %></li>
-                    <% end %>
-                  </ul>
-                </div>
+          <ul>
+            <% @listing.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
             <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-            <div class="input-group">
-              <%= f.label :name %>
-              <%= f.text_field :name, class: 'form-control', placeholder: 'Enter your name...'%>
-            </div>
+    <div class="input-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control', placeholder: 'Enter your name...'%>
+    </div>
 
-            <%= f.label :commission %> <br>
-            <div class="input-group">
-              <%= f.number_field :description, class: 'text_field form-control', step: 'any', placeholder: '30.0' %>
-              <span class="input-group-addon">%</span>
-            </div>
+    <%= f.label :commission %> <br>
+    <div class="input-group">
+      <%= f.number_field :commission, class: 'text_field form-control', step: 'any', placeholder: '30.0' %>
+      <span class="input-group-addon">%</span>
+    </div>
 
-            <%= f.label :product_value %>
-            <div class="input-group">
-              <span class="input-group-addon">$</span>
-              <%= f.number_field :value, class: 'form-control', placeholder: '5000'%>
-            </div>
+    <%= f.label :product_value %>
+    <div class="input-group">
+      <span class="input-group-addon">$</span>
+      <%= f.number_field :value, class: 'form-control', placeholder: '5000'%>
+    </div>
 
-            <%= f.label :link_to_affiliate_marketing_campaign %>
-            <div class="input-group">
-              <span class="input-group-addon">https://</span>
-              <%= f.text_field :product_url, class: 'form-control', placeholder: 'www.example.com/affiliate_campaign_manager' %>
-            </div>
+    <%= f.label :link_to_affiliate_marketing_campaign %>
+    <div class="input-group">
+      <span class="input-group-addon">https://</span>
+      <%= f.text_field :product_url, class: 'form-control', placeholder: 'www.example.com/affiliate_campaign_manager' %>
+    </div>
 
-            <%= f.label :description %> <br>
-            <div class="input-group description-text-box">
-              <%= f.text_area :description, class:"form-control"%>
-            </div>
+    <%= f.label :description %> <br>
+    <div class="input-group description-text-box">
+      <%= f.text_area :description, class:"form-control"%>
+    </div>
 
-            <div>
-              <%= f.label :image, "Image" %>
-              <%= f.file_field :image, id: "pictureInput"%>
-              <div id="uploaded-image"></div>            
-            </div>
-
-            <div class="actions">
-              <%= f.submit 'Submit', class:'btn btn-lg btn-warning form-button' %>
-            </div>
-        <% end %>
+    <div>
+      <%= f.label :image, "Image" %>
+      <%= f.file_field :image, id: "pictureInput"%>
+      <div class="uploaded-image">
+        <div id="uploaded-image"></div>
       </div>
     </div>
-  </div>
-</div>
+
+    <div class="actions">
+      <%= f.submit 'Submit', class:'btn btn-lg btn-warning form-button' %>
+    </div>
+<% end %>

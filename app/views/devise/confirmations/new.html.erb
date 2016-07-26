@@ -1,11 +1,7 @@
-<h2>Resend confirmation instructions</h2>
-
-<div class="row form-card">
-  <div class="col-lg-4 col-lg-push-4">
-    <div class="card">
-      <img class="card-img-top" data-src="http://imgs.xkcd.com/comics/walking_into_things.png">
-
-      <div class="card-block">
+<div class="container">
+    <div class="default-form">
+      <div class="jumbotron">
+        <h2>Resend confirmation instructions</h2>
         <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
           <%= devise_error_messages! %>
 
@@ -24,4 +20,3 @@
       </div>
     </div>
   </div>
-</div>

@@ -1,27 +1,22 @@
-<h2 class="text-center">Forgot your password?</h2>
-
-<div class="row form-card">
-  <div class="col-lg-4 col-lg-push-4">
-    <div class="card">
-      <img class="card-img-top" data-src="http://imgs.xkcd.com/comics/walking_into_things.png">
-
-      <div class="card-block">
+<div class="container">
+    <div class="default-form">
+      <div class="jumbotron">
+        <h2>Forgot your password?</h2>
         <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
           <%= devise_error_messages! %>
 
 
             <%= f.label :email %>
-          <div class="input-group">
-            <%= f.email_field :email, autofocus: true %>
+          <div class="form-group">
+            <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Enter your email..." %>
           </div>
 
           <div class="actions">
-            <%= f.submit "Send me reset password instructions", class: "btn btn-sm btn-warning form-button" %>
+            <%= f.submit "Send me reset password instructions", class: "btn btn-sm btn-warning" %>
           </div>
         <% end %>
 
         <%= render "devise/shared/links" %>
-      </div>
     </div>
   </div>
 </div>

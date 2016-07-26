@@ -105,8 +105,27 @@ footer a {
   color:white;
   list-style: none;
 }
+/* Listings */
+.uploaded-image img{
+  width:70%;
+}
+
+.listing-image img {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.listing-jumbo{
+  padding-top: 2em;
+  margin: 0 auto;
+}
 
 /* FORMS */
+
+.default-form {
+  padding-top: 2em;
+  margin: 0 auto;
+  width: 70%;
+}
 .form-card {
   margin-top: 2em;
   max-width: 60%;

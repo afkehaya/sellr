@@ -1,48 +1,42 @@
-<h2 class="text-center">Account Setup</h2>
- <div class="form-card">
-  <div class="row">
-    <div class="col-lg-4 col-lg-push-4">
-      <div class="card">
-        <img class="card-img-top" data-src="http://imgs.xkcd.com/comics/walking_into_things.png">
+<div class="container">
+    <div class="default-form">
+      <div class="jumbotron">
+        <h2>Account Setup</h2>
 
-          <div class="card-block">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= devise_error_messages! %>
 
-            <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-              <%= devise_error_messages! %>
+            <%= f.label :first_name %>
+            <div class="form-group">
+              <%= f.text_field :first_name, class: 'form-control', placeholder: 'First Name' %>
+            </div>
 
-                <%= f.label :first_name %>
-                <div class="input-group">
-                  <%= f.text_field :first_name, class: 'form-control', placeholder: 'First Name' %>
-                </div>
+            <%= f.label :last_name %>
+            <div class="form-group">
+              <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last Name' %>
+            </div>
+            <%= f.label :website %>
+            <div class="form-group">
+              <%= f.text_field :website, class: 'form-control', placeholder: 'URL' %>
+            </div>
 
-                <%= f.label :last_name %>
-                <div class="input-group">
-                  <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last Name' %>
-                </div>
-                <%= f.label :website %>
-                <div class="input-group">
-                  <%= f.text_field :website, class: 'form-control', placeholder: 'URL' %>
-                </div>
+            <%= f.label :phone_number %>
+            <div class="form-group">
+              <%= f.phone_field :phone_number, class: 'form-control', placeholder: 'Phone Number' %>
+            </div>
 
-                <%= f.label :phone_number %>
-                <div class="input-group">
-                  <%= f.phone_field :phone_number, class: 'form-control', placeholder: 'Phone Number' %>
-                </div>
+            <%= f.label :bio %>
+            <div class="form-group">
+              <%= f.text_area :bio, class: 'form-control' %>
+            </div>
 
-                <%= f.label :bio %>
-                <div class="input-group">
-                  <%= f.text_area :bio %>
-                </div>
-
-                <div class="actions">
-                <%= f.submit "Update", class: "btn btn-md btn-warning" %>
-              </div>
-            <% end %>
-            <%= link_to "Back", :back, class: "btn btn-sm btn-success form-button" %>
-          <div class="cancle">
-            <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete%>
+            <div class="actions">
+            <%= f.submit "Update", class: "btn btn-md btn-warning" %>
           </div>
-        </div>
+        <% end %>
+        <%= link_to "Back", :back, class: "btn btn-sm btn-success form-button" %>
+      <div class="cancle">
+        <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete%>
       </div>
     </div>
   </div>

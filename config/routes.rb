@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   post '/thankyou' => 'merchant_applications#thankyou'
+  post '/merchant_application' => 'merchant_applications#new'
   get '/thankyou' => 'merchant_applications#thankyou'
 
   resources :listings
