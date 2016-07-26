@@ -21,18 +21,26 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-        <li class="nav-new-listing">
-        <%= link_to new_listing_path do %>
-            <span class="glyphicon glyphicon-plus new-listing-plus"></span> New Listing
-          <% end %>
-        </li>
           <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
 
           <li><%= link_to "My Account", edit_user_registration_path, class: "navbar-brand nav-link" %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-brand" %></li>
+          <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-brand"  %></li>
+       <% end %>
+
+      <% if merchant_signed_in? %>
+      <li class="nav-new-listing">
+      <%= link_to new_listing_path do %>
+          <span class="glyphicon glyphicon-plus new-listing-plus"></span> New Listing
+        <% end %>
+      </li>
+
+      <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
+      <li><%= link_to "My Account", edit_merchant_registration_path, class: "navbar-brand nav-link" %></li>
+      <li><%= link_to "Log out", destroy_merchant_session_path, method: :delete, class: "navbar-brand"  %></li>
+
       <% else %>
-          <li><%= link_to "Sign Up", new_user_registration_path, class: "navbar-brand" %></li>
-          <li><%= link_to "Log In", new_user_session_path, class: "navbar-brand" %></li>
+      <li><%= link_to "Merchant Log In", new_merchant_session_path, class: "navbar-brand" %></li>
+      <li><%= link_to "Seller Log In", new_user_session_path, class: "navbar-brand" %></li>
       <% end %>
         </li>
       </ul>
