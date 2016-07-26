@@ -37,7 +37,7 @@ namespace :deploy do
   task :linkup do
     on roles(:app) do
       within "#{release_path}/config" do
-        %w(database secrets application).each do |config_file|
+        %w(database secrets).each do |config_file|
           execute :rm, "-f", "#{config_file}.yml"
           execute :ln, "-s", "#{config_file}.yml-#{fetch(:stage).to_s}", "#{config_file}.yml"
         end
