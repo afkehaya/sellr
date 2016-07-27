@@ -138,6 +138,12 @@ footer a {
   margin: 0 auto;
 }
 
+.listing-back-link {
+  float: right;
+  font-size: 15pt;
+}
+
+
 /* FORMS */
 
 .default-form {
@@ -184,6 +190,10 @@ textarea {
   margin-top: 6px;
   margin-right: 10px;
 }
+
+.col-md-6 h4 {
+  font-weight: bolder;
+}
 /* About Page */
 
 .about a {
@@ -197,3 +207,4 @@ textarea {
 .about-text h4 {
   font-weight: bolder;
 }
+
