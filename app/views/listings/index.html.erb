@@ -46,7 +46,7 @@
                 <p> $<%= listing.value %> / Month</p>
 
                 <%= link_to 'View Listing', listing %>
-                <%= link_to 'Edit', edit_listing_path(listing), class:"glyphicon glyphicon-edit" if user_signed_in? && current_user.merchant? %>
+                <%= link_to 'Edit', edit_listing_path(listing), class:"glyphicon glyphicon-edit edit-in-card" if user_signed_in? && current_user.merchant? %>
                 <%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:"glyphicon glyphicon-trash" if user_signed_in? && current_user.merchant?  %>
 
               </div>
