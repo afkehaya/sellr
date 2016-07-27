@@ -13,7 +13,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+      <ul id="parent-btn-become-merchant" class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
         <li class="nav-new-listing">
         <% if current_user.merchant? %>
@@ -22,7 +22,10 @@
             <% end %>
           <% end %>
         </li>
-          <li><%= button_to "Become A Merchant", new_merchant_application_path, class: "btn btn-sm btn-warning btn-merchantapp" %></li>
+          <li id="btn-become-merchant"><%= button_to "Become A Merchant", new_merchant_application_path, class: "btn btn-sm btn-warning btn-merchantapp" %></li>
+          <% if current_user.merchant? %>
+            <%= javascript_include_tag "remove_merchant_button.js" %>
+          <% end %>
           <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
 
           <li><%= link_to "My Account", edit_user_registration_path, class: "navbar-brand nav-link" %></li>
@@ -37,3 +40,6 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+

@@ -22,7 +22,7 @@ class MerchantApplicationsController < ApplicationController
   end
 
   def thankyou
-    # Routs to thankyou page after a merchant applies.
+    # Routes to thankyou page after a merchant applies.
     
   end
 

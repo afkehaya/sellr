@@ -105,6 +105,11 @@ html, body {
 	width: 100%;
 }
 
+.edit-in-card {
+  padding-left: 13%;
+  padding-right: 13%;
+}
+
 /* FOOTER */
 .footer, .push {
     height: 100px; /* .push must be the same height as .footer */
@@ -137,6 +142,12 @@ footer a {
   padding-top: 2em;
   margin: 0 auto;
 }
+
+.listing-back-link {
+  float: right;
+  font-size: 15pt;
+}
+
 
 /* FORMS */
 
@@ -184,6 +195,10 @@ textarea {
   margin-top: 6px;
   margin-right: 10px;
 }
+
+.col-md-6 h4 {
+  font-weight: bolder;
+}
 /* About Page */
 
 .about a {
@@ -197,3 +212,4 @@ textarea {
 .about-text h4 {
   font-weight: bolder;
 }
+
