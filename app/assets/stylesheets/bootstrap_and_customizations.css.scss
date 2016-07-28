@@ -55,7 +55,7 @@ html, body {
 }
 .btn-listing {
   padding-top: 1em;
-  
+
 }
 
 
@@ -71,6 +71,12 @@ html, body {
   margin-top: 2em;
 }
 
+.headline-listing {
+  color: #431c5d;
+}
+.value-prop {
+  line-height: 25px;
+}
 .box-sizer {
   width: 15%;
 }
@@ -89,7 +95,7 @@ html, body {
 .listings {
   margin: 0 auto;
   margin-bottom: 2em;
-  padding-left: 10%
+  padding-left: 10%;
 }
 
 #listings-container {
@@ -105,9 +111,20 @@ html, body {
 	width: 100%;
 }
 
+.edit-in-card {
+  padding-left: 13%;
+  padding-right: 13%;
+}
+
 /* FOOTER */
 .footer, .push {
     height: 100px; /* .push must be the same height as .footer */
+}
+
+@media screen and (max-width: 991px) {
+  .footer, .push {
+      height: 200px; /* .push must be the same height as .footer */
+  }
 }
 
 .footer {
@@ -137,6 +154,12 @@ footer a {
   padding-top: 2em;
   margin: 0 auto;
 }
+
+.listing-back-link {
+  float: right;
+  font-size: 15pt;
+}
+
 
 /* FORMS */
 
@@ -183,6 +206,14 @@ textarea {
 .btn-merchantapp {
   margin-top: 6px;
   margin-right: 10px;
+}
+
+.merchant-text h5 {
+  line-height: 20px
+}
+
+.col-md-6 h4 {
+  font-weight: bolder;
 }
 /* About Page */
 

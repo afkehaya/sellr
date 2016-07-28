@@ -13,28 +13,34 @@
 
   <%= f.label :first_name %>
   <div class="form-group">
-    <%= f.text_field :first_name, class: "form-control" %>
+    <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
   </div>
 
   <%= f.label :last_name %>
   <div class="form-group">
-    <%= f.text_field :last_name, class: "form-control" %>
+    <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
   </div>
-
+  <%= f.label :email %>
+  <div class="form-group">
+    <%= f.text_field :email, class: "form-control", placeholder: "Enter your email..." %>
+  </div>
   <%= f.label :company %>
   <div class="form-group">
-    <%= f.text_field :company, class: "form-control" %>
+    <%= f.text_field :company, class: "form-control", placeholder: "Company Name" %>
   </div>
 
   <%= f.label :phone_number %>
-  <div class="form-group">
-    <%= f.text_field :phone_number, class: "form-control" %>
+  <div class="input-group">
+    <span class="input-group-addon">#</span>
+    <%= f.text_field :phone_number, class: "form-control", placeholder: "Phone Number" %>
   </div>
-
+  <br>
   <%= f.label :website %>
-  <div class="form-group">
-    <%= f.text_field :website, class: "form-control" %>
+  <div class="input-group">
+    <span class="input-group-addon">https://</span>
+    <%= f.text_field :website, class: "form-control", placeholder: "www.example.com" %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit "Become A Merchant", class: "btn btn-md btn-warning" %>
   </div>
