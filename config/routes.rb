@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   authenticate :user do
     resources :listings, only: [:new, :create, :edit, :update, :destroy]
   end
-  post '/merchant_applications/new', to: 'merchant_applications#new', as: "merchant"
+  post '/merchant', to: 'merchant_applications#new'
+  get '/merchant', to: 'merchant_applications#new'
+
+
   post '/thankyou' => 'merchant_applications#thankyou', as: "thanks"
   get '/thankyou' => 'merchant_applications#thankyou', as: "thankyou"
   post '/terms' => 'static#terms'
