@@ -71,6 +71,12 @@ html, body {
   margin-top: 2em;
 }
 
+.headline-listing {
+  color: #431c5d;
+}
+.value-prop {
+  line-height: 25px;
+}
 .box-sizer {
   width: 15%;
 }
@@ -89,7 +95,7 @@ html, body {
 .listings {
   margin: 0 auto;
   margin-bottom: 2em;
-  padding-left: 10%
+  padding-left: 10%;
 }
 
 #listings-container {

@@ -1,21 +1,21 @@
 <% if !user_signed_in? %>
   <div class="jumbotron text-center">
     <div class="container">
-      <h1 class="headline">We Generate Recurring Revenue</h1>
+      <h1 class="headline">An Affiliate Network For Recurring Revenue</h1>
 
       <%= link_to "Become a Merchant", '/merchant', class: "btn btn-lg btn-warning" %>
         <div class="row benefits">
           <div class="col-md-6">
           <h2>Find affiliates to sell your products.</h2>
-          <h4>
+          <h4 class="value-prop">
             Midas Merchants are companies who offer affiliates the
             opportunity to earn a percentage of
             recurring revenue for every sale they make.
           </h4>
         </div>
         <div class="col-md-6">
-          <h2> Earn recurring revenue.</h2>
-          <h4>
+          <h2>Affiliates Earn recurring revenue.</h2>
+          <h4 class="value-prop">
             Search the Midas Marketplace for products to sell. These products will
             generate recurring revenue for each sale you make.
           </h4>
@@ -25,11 +25,10 @@
   </div>
 <% end %>
 
-<div class="listings container">
-  <div id="listings-container" class="transitions-enabled">
+<div class="container">
+  <div class="listings">
+  <div id="listings-container" class="text-center transitions-enabled">
     <p id="notice"><%= notice %></p>
-    <h1>Merchants</h1>
-
 
 
         <% @listings.each do |listing| %>
@@ -53,4 +52,5 @@
             </div>
          <% end %>
       </div>
+     </div>
     </div>
