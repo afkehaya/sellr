@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( display_image.js )
 Rails.application.config.assets.precompile += %w( remove_merchant_button.js )
 Rails.application.config.assets.precompile += %w( increment_listing_count.js )
+Rails.application.config.assets.precompile += %w( google_analytics.js )
