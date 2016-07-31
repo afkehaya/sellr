@@ -20,6 +20,10 @@ Rails.application.routes.draw do
   post '/about' => 'static#about'
   get '/about' => 'static#about'
 
-  resources :listings
+  resources :listings do
+    member do
+      get 'increment_listing_count'
+    end
+  end
   root 'listings#index'
 end

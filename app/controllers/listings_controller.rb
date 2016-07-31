@@ -65,6 +65,18 @@ class ListingsController < ApplicationController
     end
   end
 
+  def increment_listing_count
+    listing = Listing.find(params[:listing])
+    listing.sale_count += 1
+    listing.save!
+
+    if request.xhr?
+      render :json => {
+          :new_sale_count => listing.sale_count
+      }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_listing
