@@ -6,8 +6,6 @@ default: &default
 development:
   <<: *default
   database: sellr_development
-  username: sellr
-  password: sellr_pass
 
 test:
   <<: *default

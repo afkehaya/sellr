@@ -4,16 +4,16 @@
 	<div class="container text-center">
    <div class="row">
 		 <div class="col-md-4">
-			 <div class="copywrite">
+			 <div class="copywrite ">
+        <p><%= link_to "Become a Merchant", '/merchant'%></p>
+				<p><%= link_to "Become an Affiliate", '/merchant'%></p>
 
-        <p><%= link_to "Log In", new_user_session_path %></p>
-			 	<p><%= link_to "Sign Up", new_user_registration_path %></p>
 
 			 </div>
 		 </div>
 		 <div class="col-md-4">
 				<div class="copywrite">
-					<p><%= link_to "Become An Affiliate", new_user_registration_path %><p>
+					<p class="hide"><%= link_to "Become An Affiliate", new_user_registration_path %><p>
 				  <p><a href="https://www.opuslogica.com">© 2016 OpusLogica</a></p>
 
 
