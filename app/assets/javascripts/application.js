@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require masonry/jquery.masonry
+//= requrie increment_listing_count
 //= require_tree .
 
 $(function(){

@@ -1,0 +1,1 @@
+window.onload=function(){document.getElementById("pictureInput").addEventListener("change",function(e){var n=e.target.files,t=n[0],a=new FileReader;a.onload=function(e){var n=new Image;n.src=e.target.result,document.getElementById("uploaded-image").innerHTML="<img src='"+n.src+"'>"},a.readAsDataURL(t)})};
