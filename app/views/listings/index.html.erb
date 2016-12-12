@@ -1,26 +1,18 @@
 <% if !user_signed_in? %>
   <div class="jumbotron text-center">
     <div class="container">
-      <h1 class="headline">Affiliate Programs For Recurring Revenue</h1>
-
-      <%= link_to "Become a Merchant", '/merchant', class: "btn btn-lg btn-warning" %>
+      <h1 class="headline">Referral Programs Where You Can Earn Recurring Revenue</h1>
+      <a href="http://win.actionwins.co/referral-marketing-software/?utm_source=midas&utm_medium=ctabtn&utm_campaign=midasmerchants" class="btn btn-lg btn-warning">Want a referral program for your product?</a>
         <div class="row benefits">
-          <div class="col-md-6">
-          <h2>Find affiliates to sell your products.</h2>
-          <h5>
-            Midas Merchants are companies who offer affiliates the
-            opportunity to earn a percentage of
-            recurring revenue for every sale they make. All affiliates are vetted via an
-            application process to ensure they are high quality.
-          </h5>
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+          <!-- <h3>
+            We've made a list of products that we love that offer great referral programs. For each person you sign up, you'll earn a recurring commission as long as that customer stays active.
+            Whether you own a software business, are a freelancer, or run any other online buisness, you can use this list to create a new recurring revenue stream.
+          </h3> -->
         </div>
-        <div class="col-md-6">
-          <h2>Affiliates earn recurring revenue.</h2>
-          <h5>
-            By joining Midas Merchants, affiliates gain access to exclusive affiliate
-            deals and recurring revenue from our partner merchants.
-            Once you're accepted you'll be able to start selling to earn recurring revenue.
-          </h5>
+        <div class="col-md-2">
         </div>
       </div>
     </div>
@@ -34,6 +26,7 @@
 
 
         <% @listings.each do |listing| %>
+          <a href="<%= listing.product_url %>" target="_blank" >
           <div class="box panel panel-default box-sizer">
             <div class="listing-box-image">
               <%= image_tag listing.image.url(:large), class: "listing-image" %>
@@ -42,16 +35,14 @@
               <div class="panel-body">
               <div class="actions">
                 <p><%= listing.name %></p>
-                <p> <%= listing.commission %>%/ Month</p>
-                <p> $<%= listing.value %> / Month</p>
-
-                <%= link_to 'View Listing', listing %>
+                <p>Commisson: <%= listing.commission %>%/ Month</p>
                 <%= link_to 'Edit', edit_listing_path(listing), class:"glyphicon glyphicon-edit edit-in-card" if user_signed_in? && current_user.merchant? %>
                 <%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:"glyphicon glyphicon-trash" if user_signed_in? && current_user.merchant?  %>
 
               </div>
              </div>
             </div>
+          </a>
          <% end %>
       </div>
      </div>
